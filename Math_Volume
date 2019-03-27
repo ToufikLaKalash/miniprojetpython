@@ -1,0 +1,72 @@
+from math import pi
+
+
+def cylindre():
+    print("La formule est π × R^2 × h;")
+    print("Entrez votre Rayon R:")
+    r = float(input())
+    print("Entrez votre hauteur h:")
+    h = float(input())
+    print("Le volume est de", pi*r**2*h, "cm^3")
+
+
+def cube():
+    print("La formule est C^3;")
+    print("Entrez votre arête C:")
+    c = float(input())
+    print("Le volume est de", c**3, "cm^3")
+
+
+def pyramide():
+    print("La formule est (c^2 × h) ÷ 3;")
+    print("Entrez votre côté de la base c")
+    c = float(input())
+    print("Entrez votre hauteur h:")
+    h = float(input())
+    print("Le volume est de", (c**2*h)/3, "cm^3")
+
+
+def rectangle():
+    print("La formule est l×L×h;")
+    print("Entrez votre longueur l:")
+    long = float(input())
+    print("Entrez votre Largeur L:")
+    larg = float(input())
+    print("Entrez votre hauteur h:")
+    h = float(input())
+    print("Le volume est de", long*larg*h, "cm^3")
+
+
+def sphere():
+    print("La formule est (4π/3) × R^3;")
+    print("Entrez votre Rayon R:")
+    r = float(input())
+    print("Le volume est de", (4*pi/3)*r**3, "cm^3")
+
+
+def choice():
+    uinon = ''
+    while uinon != "n" and uinon != "N":
+        print("Quel volume voulez-vous calculer?")
+        print("TOUTES LES MESURES SONT EN CM ET LES RESULTATS EN CM^3")
+        print("||Cylindre[P]||Cube[E]||Pyramide[N]||Parallélépipède rectangle[I]||Sphère[S]||")
+        choix = input()
+        if choix == "P":
+            cylindre()
+        elif choix == "E":
+            cube()
+        elif choix == "N":
+            pyramide()
+        elif choix == "I":
+            rectangle()
+        elif choix == "S":
+            sphere()
+        else:
+            print("ce n'est pas une lettre valide du tout ça...")
+        print("Un autre calcul???? (y/n)")
+        uinon = input()
+    print("haha on s'est bien amusé hihi... UwU :3")
+
+
+choice()
+
